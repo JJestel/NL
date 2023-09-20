@@ -1,3 +1,9 @@
+MP1/images
+MP1/compiled
+.DS_Store
+
+# Python Template 
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
