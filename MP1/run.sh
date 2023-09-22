@@ -102,18 +102,15 @@ fst2word() {
 }
 
 trans=date2text.fst
-test_string="OCT-/-3-1-/-2-0-2-5"
-seperator="-"
-
+test_string="OCT/31/2025"
 # test_string="10/31/2025"
-# seperator=""
 
 echo "\n***********************************************************"
 echo "Testing $test_string (output is a string  using 'syms-out.txt')"
 echo "***********************************************************"
 for w in $test_string; do
 
-    res=$(python3 ./scripts/word2fst.py $w --separator=$seperator| fstcompile --isymbols=syms.txt --osymbols=syms.txt | fstarcsort |
+    res=$(python3 ./scripts/word2fst.py $w | fstcompile --isymbols=syms.txt --osymbols=syms.txt | fstarcsort |
                        fstcompose - compiled/$trans | fstshortestpath | fstproject --project_type=output |
                        fstrmepsilon | fsttopsort | fstprint --acceptor --isymbols=./scripts/syms-out.txt | fst2word)
     echo "$w = $res"
