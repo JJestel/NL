@@ -14,7 +14,7 @@ done
 
 # concat mmm2mm and identity to create mix2numerical
 # this would accept faulty data but as statesd in the project only valid dates are used
-fstconcat compiled/mmm2mm.fst compiled/identity.fst > compiled/mix2numerical.fst
+fstconcat compiled/mmm2mm.fst compiled/h_identity.fst > compiled/mix2numerical.fst
 
 
 # invert pt2en to create en2pt
