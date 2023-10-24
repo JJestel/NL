@@ -14,7 +14,7 @@ Natural Language
 
 Authors: Piotr Migdałek, Jascha Jestel
 
-Group: 77
+Group: 74
 
 Task: Hotel reviews - Sentiment analysis
 
