@@ -696,7 +696,7 @@ for i, r in missclass.sort_values(by='sentiment').iterrows():
 
 """# Apply Best Model to the Real Test Set"""
 
-test = pd.read_csv("/content/drive/MyDrive/test_just_reviews.txt", sep='\t', header = 0, names = ['review'])
+test = pd.read_csv("/content/drive/MyDrive/test_just_reviews.txt", sep='\t', names = ['review'])
 
 test["review_soft_clean"] = test["review"].apply(soft_clean_text)
 
